@@ -21,7 +21,6 @@ export default [
       ecmaVersion: 2022, // 支持ES2022
       sourceType: 'module', // 支持ES模块
       parserOptions: {
-        project: ['./tsconfig.json', './tsconfig.spec.json'],
         projectService: true, // 支持项目服务
         tsconfigRootDir: process.cwd(), // 支持TypeScript配置文件的根目录
         allowDefaultProject: true, // 支持默认项目

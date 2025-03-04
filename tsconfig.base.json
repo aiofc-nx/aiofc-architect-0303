@@ -7,6 +7,9 @@
     "rootDir": ".",
     "types": ["node", "jest"],
     "lib": ["ES2021"],
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "@aiofc/config": ["packages/infrastructures/config/src/index.ts"]
+    }
   }
 }
