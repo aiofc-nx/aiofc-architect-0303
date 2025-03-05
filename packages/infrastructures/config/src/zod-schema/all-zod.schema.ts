@@ -1,4 +1,4 @@
-import { RecordNamePaths } from '@aiofc/typings';
+import { RecordNamePaths } from '@aiofc/base-typed';
 import { z } from 'zod';
 
 import { appZodSchema, IAppConfig } from './app-zod.schema';
