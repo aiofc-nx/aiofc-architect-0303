@@ -21,9 +21,9 @@ export default [
       ecmaVersion: 2022, // 支持ES2022
       sourceType: 'module', // 支持ES模块
       parserOptions: {
-        projectService: true, // 支持项目服务
-        tsconfigRootDir: process.cwd(), // 支持TypeScript配置文件的根目录
-        allowDefaultProject: true, // 支持默认项目
+        // project: './tsconfig.json',
+        // tsconfigRootDir: process.cwd(),
+        allowDefaultProject: true, // 我们的monorepo项目的嵌套关系导致tsconfig.json路径是不确定的，所以选择默认项目
       },
     },
     ignores: [
@@ -33,21 +33,5 @@ export default [
       '**/*.d.ts',
       'eslint.config.mjs',
     ],
-  },
-  {
-    files: ['**/*.ts', '**/*.tsx'],
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-misused-promises': 'off',
-      '@typescript-eslint/require-await': 'off',
-    },
-  },
-  // 对测试文件放宽检查 - 放在最后确保不被覆盖
-  {
-    files: ['**/*.spec.ts', '**/*.test.ts'],
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-    },
   },
 ];

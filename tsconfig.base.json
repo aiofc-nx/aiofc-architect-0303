@@ -8,8 +8,15 @@
     "types": ["node", "jest"],
     "lib": ["ES2021"],
     "declaration": true,
+    "esModuleInterop": true,
     "paths": {
-      "@aiofc/config": ["packages/infrastructures/config/src/index.ts"]
+      "@aiofc/base-typed": ["packages/infrastructures/base-typed/src/index.ts"],
+      "@aiofc/config": ["packages/infrastructures/config/src/index.ts"],
+      "@aiofc/fastify-server": [
+        "packages/infrastructures/fastify-server/src/index.ts"
+      ],
+      "@aiofc/logger": ["packages/infrastructures/logger/src/index.ts"],
+      "@aiofc/utils": ["packages/infrastructures/utils/src/index.ts"]
     }
   }
 }
