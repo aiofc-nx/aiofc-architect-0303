@@ -12,7 +12,13 @@
     "commit": "cz",
     "clean": "gulp clean:bundle",
     "format": "prettier --write \"**/src/**/*.ts\"",
-    "lint": "eslint \"apps/**/*.ts\" \"packages/**/*.ts\" --fix"
+    "lint": "eslint \"apps/**/*.ts\" \"packages/**/*.ts\" --fix",
+    "doc": "typedoc --options typedoc.json && vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:typedoc": "typedoc --options typedoc.json",
+    "docs:typedoc:watch": "typedoc --watch"
   },
   "config": {
     "commitizen": {
@@ -24,12 +30,9 @@
   },
   "private": true,
   "devDependencies": {
-    "husky": "^8.0.0",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@commitlint/types": "^19.5.0",
-    "commitizen": "^4.3.1",
-    "cz-customizable": "^7.4.0",
     "@darraghor/eslint-plugin-nestjs-typed": "^6.2.5",
     "@eslint/js": "^9.21.0",
     "@nestjs/schematics": "^11.0.2",
@@ -47,12 +50,16 @@
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@types/jest": "^29.5.14",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "~18.16.9",
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.4.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^16.0.0",
+    "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-environment-node": "^29.7.0",
     "nx": "20.5.0-rc.1",
@@ -60,15 +67,40 @@
     "ts-jest": "^29.2.6",
     "ts-node": "10.9.2",
     "tslib": "^2.8.1",
-    "typescript": "~5.8.2",
+    "typedoc-vitepress-theme": "^1.1.2",
+    "typescript": "5.7.3",
     "typescript-eslint": "^8.26.0",
+    "verdaccio": "^6.0.5",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@aiofc/base-typed": "workspace:*",
+    "@aiofc/config": "workspace:*",
+    "@aiofc/logger": "workspace:*",
+    "@aiofc/utils": "workspace:*",
     "@nestjs/common": "^11.0.11",
+    "@nestjs/config": "^4.0.1",
     "@nestjs/core": "^11.0.11",
-    "@nestjs/platform-express": "^11.0.11",
+    "@nestjs/platform-fastify": "^11.0.11",
+    "argon2": "^0.41.1",
+    "class-transformer": "^0.5.1",
+    "js-yaml": "^4.1.0",
+    "nanoid": "3.3.8",
+    "nestjs-cls": "^5.4.0",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "pino-pretty": "^13.0.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "typedoc": "^0.27.9",
+    "typedoc-plugin-markdown": "^4.4.2",
+    "vitepress": "^1.6.3",
+    "zod": "^3.24.2"
+  },
+  "nx": {
+    "includedScripts": [
+      "format",
+      "doc"
+    ]
   }
 }
