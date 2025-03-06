@@ -15,9 +15,6 @@
       "path": "../../packages/infrastructures/logger/tsconfig.lib.json"
     },
     {
-      "path": "../../packages/infrastructures/fastify-server/tsconfig.lib.json"
-    },
-    {
       "path": "../../packages/infrastructures/config/tsconfig.lib.json"
     }
   ]

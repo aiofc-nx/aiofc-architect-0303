@@ -20,6 +20,9 @@
     },
     {
       "path": "./packages/infrastructures/base-typed"
+    },
+    {
+      "path": "./apps/pg-admin"
     }
   ]
 }

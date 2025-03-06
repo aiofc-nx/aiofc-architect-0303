@@ -7,9 +7,6 @@
       "path": "../../packages/infrastructures/logger"
     },
     {
-      "path": "../../packages/infrastructures/fastify-server"
-    },
-    {
       "path": "../../packages/infrastructures/config"
     },
     {
@@ -20,7 +17,7 @@
     }
   ],
   "compilerOptions": {
-    "esModuleInterop": true,
-    "composite": true
+    "composite": true,
+    "esModuleInterop": true
   }
 }

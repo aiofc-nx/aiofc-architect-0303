@@ -20,7 +20,7 @@
     "docs:typedoc": "typedoc --options typedoc.json",
     "docs:typedoc:watch": "typedoc --watch",
     "db:generate": "drizzle-kit generate --config tools/drizzle/src/lib/aiofc.config.ts",
-    "db:migrate": "cross-env NODE_OPTIONS='--import tsx' DB_MIGRATING=true node tools/drizzle/src/command/aiofc.migrate.pg.ts",
+    "db:migrate": "cross-env NODE_OPTIONS='--import tsx' DB_MIGRATING=true node tools/drizzle/src/command/node-postgres.migrate.ts",
     "db:studio": "drizzle-kit studio --config tools/drizzle/src/lib/aiofc.config.ts"
   },
   "config": {
