@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1741247246303,
+      "tag": "0000_gifted_toxin",
+      "breakpoints": true
+    }
+  ]
+}

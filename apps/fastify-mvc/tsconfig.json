@@ -4,6 +4,15 @@
   "include": [],
   "references": [
     {
+      "path": "../../packages/infrastructures/logger"
+    },
+    {
+      "path": "../../packages/infrastructures/fastify-server"
+    },
+    {
+      "path": "../../packages/infrastructures/config"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {
@@ -11,6 +20,7 @@
     }
   ],
   "compilerOptions": {
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "composite": true
   }
 }

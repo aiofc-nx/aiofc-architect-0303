@@ -5,6 +5,7 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app/app.controller';
 import { AppService } from './app/app.service';
+import { DrizzlePgModule } from './drizzle/node-postgres/drizzle-pg.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AppService } from './app/app.service';
     setupLoggerModule(),
     // 缓存模块
     setupClsModule(),
+    DrizzlePgModule,
   ],
   controllers: [AppController],
   providers: [AppService],
