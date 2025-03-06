@@ -2,6 +2,7 @@
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "module": "commonjs",
+    "composite": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "importHelpers": true,
@@ -13,6 +14,9 @@
   "files": [],
   "include": [],
   "references": [
+    {
+      "path": "../base-typed"
+    },
     {
       "path": "./tsconfig.lib.json"
     },

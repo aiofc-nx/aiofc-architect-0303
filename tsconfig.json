@@ -2,5 +2,24 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./packages/infrastructures/drizzle-schema"
+    },
+    {
+      "path": "./apps/fastify-mvc"
+    },
+    {
+      "path": "./packages/infrastructures/fastify-server"
+    },
+    {
+      "path": "./packages/infrastructures/config"
+    },
+    {
+      "path": "./packages/infrastructures/logger"
+    },
+    {
+      "path": "./packages/infrastructures/base-typed"
+    }
+  ]
 }

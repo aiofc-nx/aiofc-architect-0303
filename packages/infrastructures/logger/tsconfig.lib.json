@@ -13,5 +13,10 @@
     "experimentalDecorators": true // 启用实验性装饰器
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
+  "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
+  "references": [
+    {
+      "path": "../config/tsconfig.lib.json"
+    }
+  ]
 }

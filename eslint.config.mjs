@@ -7,7 +7,12 @@ export default [
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist', '**/node_modules', '**/package.json'],
+    ignores: [
+      '**/dist',
+      '**/node_modules',
+      '**/package.json',
+      '.markdownlint.jsonc',
+    ],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],

@@ -12,6 +12,9 @@
     "paths": {
       "@aiofc/base-typed": ["packages/infrastructures/base-typed/src/index.ts"],
       "@aiofc/config": ["packages/infrastructures/config/src/index.ts"],
+      "@aiofc/drizzle-schema": [
+        "packages/infrastructures/drizzle-schema/src/index.ts"
+      ],
       "@aiofc/fastify-server": [
         "packages/infrastructures/fastify-server/src/index.ts"
       ],
