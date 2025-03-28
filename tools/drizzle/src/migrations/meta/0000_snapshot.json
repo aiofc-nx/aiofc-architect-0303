@@ -1,11 +1,36 @@
 {
-  "id": "8b3dfb85-2e8a-40ec-a457-2f6b93512004",
+  "id": "b27cb1c3-7ed6-46b2-91be-718603eac7b3",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.job": {
-      "name": "job",
+    "public.books": {
+      "name": "books",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.jobs": {
+      "name": "jobs",
       "schema": "",
       "columns": {
         "id": {
@@ -56,8 +81,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.tenant": {
-      "name": "tenant",
+    "public.tenants": {
+      "name": "tenants",
       "schema": "",
       "columns": {
         "id": {
@@ -148,15 +173,15 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "tenant_schema_unique": {
-          "name": "tenant_schema_unique",
+        "tenants_schema_unique": {
+          "name": "tenants_schema_unique",
           "nullsNotDistinct": false,
           "columns": [
             "schema"
           ]
         },
-        "tenant_organization_code_unique": {
-          "name": "tenant_organization_code_unique",
+        "tenants_organization_code_unique": {
+          "name": "tenants_organization_code_unique",
           "nullsNotDistinct": false,
           "columns": [
             "organization_code"
@@ -167,8 +192,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.user": {
-      "name": "user",
+    "public.users": {
+      "name": "users",
       "schema": "",
       "columns": {
         "id": {
@@ -282,22 +307,22 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "user_username_unique": {
-          "name": "user_username_unique",
+        "users_username_unique": {
+          "name": "users_username_unique",
           "nullsNotDistinct": false,
           "columns": [
             "username"
           ]
         },
-        "user_email_unique": {
-          "name": "user_email_unique",
+        "users_email_unique": {
+          "name": "users_email_unique",
           "nullsNotDistinct": false,
           "columns": [
             "email"
           ]
         },
-        "user_phone_unique": {
-          "name": "user_phone_unique",
+        "users_phone_unique": {
+          "name": "users_phone_unique",
           "nullsNotDistinct": false,
           "columns": [
             "phone"

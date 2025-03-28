@@ -56,6 +56,8 @@ export function validateConfig(filePath: string) {
   if (!parsedConfig.success) {
     throw new Error(`配置验证失败: ${JSON.stringify(parsedConfig.error)}`);
   } else {
+    console.log(process.env['CONFIG_FILE_PATH']);
+    console.log(parsedConfig.data);
     console.log(`配置验证通过!`);
   }
 

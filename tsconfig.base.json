@@ -9,6 +9,7 @@
     "lib": ["ES2021"],
     "declaration": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "paths": {
       "@aiofc/base-typed": ["packages/infrastructures/base-typed/src/index.ts"],
       "@aiofc/config": ["packages/infrastructures/config/src/index.ts"],
